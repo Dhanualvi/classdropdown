@@ -16,7 +16,7 @@ func import_resource_data():
 	file.seek(0)
 	while !file.eof_reached():
 		var data_set = file.get_csv_line()
-		var job_name = int(data_set[0].strip_edges()) # Assuming job ID is in the first column
+		var job_name = int(data_set[0].strip_edges())
 		job_dict[job_name] = data_set
 
 	#print(job_dict)

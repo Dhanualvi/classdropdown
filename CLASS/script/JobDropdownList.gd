@@ -15,8 +15,7 @@ func import_job_name():
 	
 	while !file.eof_reached(): 
 		var data_set = file.get_csv_line()
-		#print("Data set:", data_set)  # Debug print to check data read from CSV
-		var job_name = data_set[1].strip_edges()  # Assuming job name is in the second column
+		var job_name = data_set[1].strip_edges()  
 		job_names.append(job_name)
 	
 	file.close()
@@ -25,4 +24,4 @@ func import_job_name():
 	
 func _on_item_selected(text):
 	print("Selected item:", text)
-	# Do whatever you need with the selected item
+	
