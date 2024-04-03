@@ -18,8 +18,6 @@ func import_resource_data():
 		var data_set = file.get_csv_line()
 		var job_name = int(data_set[0].strip_edges())
 		job_dict[job_name] = data_set
-
-	#print(job_dict)
 	return job_dict
 	
 func print_job_data(job_data, job_name):
